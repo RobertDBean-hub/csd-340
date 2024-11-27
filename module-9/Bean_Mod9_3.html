@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+      Professor John Woods
+       Assignment 9.3
+-->
+<head>
+    <meta name="description" content="Assignment 9.3 Documentation">
+    <meta name="author" content="Robert Dylan Bean">
+    <meta name="keywords" content="HTML, CSS, CSD 340, Web Development">
+    <meta name="robots" content="nofollow">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        var firstVariableValue = "Frodo";
+        var secondVariableValue = "Sam";
+        var thirdVariableValue = "stories";
+        var fourthVariableValue = "good";
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+        <p>FRODO: "I can't do this, <span id="Frodo">_________</span>."
+        <p>SAM: "I know. It's all wrong. By rights we shouldn't even be here. But we are. It's like in the great <span id="stories">_________</span>, Mr. Frodo. The ones that really mattered. Full of darkness and danger they were. And sometimes you didn't want to know the end. Because how could the end be happy? How could the world go back to the way it was when so much bad had happened?</p>
+        <p>But in the end, it's only a passing thing, this shadow. Even darkness must pass. A new day will come. And when the sun shines it will shine out the clearer. Those were the stories that stayed with you. That meant something. Even if you were too small to understand why. But I think, Mr. Frodo, I do understand. I know now. Folk in those stories had lots of chances of turning back only they didn't. Because they were holding on to something."</p>
+        <p>FRODO: "What are we holding on to, <span id="Sam">_________</span>?"</p>
+        <p>SAM: "That there's some <span id="good">_________</span> in this world, Mr. Frodo. And it's worth fighting for."</p>
+        
+        <p>
+            <button type="button" onclick="document.getElementById('Frodo').innerHTML = firstVariableValue">Frodo</button><br />
+            <button type="button" onclick="document.getElementById('stories').innerHTML = thirdVariableValue">stories</button><br />
+            <button type="button" onclick="document.getElementById('Sam').innerHTML = secondVariableValue">Sam</button><br />
+            <button type="button" onclick="document.getElementById('good').innerHTML = fourthVariableValue">good</button><br />
+        </p>
+
+        <hr />
+
+        <address>
+            <p><a href="https://www.bellevue.edu">Bellevue University</a></p>
+            <p>1000 Galvin Road South</p>
+            <p>Bellevue, NE 68005</p>
+        </address>
+    </div>
+</body>
+</html>
