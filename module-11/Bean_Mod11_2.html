@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="description" content="Assignment 11.2 Documentation">
+   <meta name="author" content="Robert Dylan Bean">
+   <meta name="keywords" content="HTML, CSS, CSD 340, Web Development">
+   <meta name="robots" content="nofollow">
+   <title>CSD 340 Web Development with HTML and CSS</title>
+   <script>
+     let itemArray = [];
+     
+     function addItem() {
+         const item = document.getElementById("itemInput").value;
+         if (item) {
+             itemArray.push(item);
+             alert(`This page says:\nItem: ${item} Added as Item ${itemArray.length}`);
+             document.getElementById("itemInput").value = "";
+         } else {
+             alert("Please enter an item.");
+         }
+     }
+     
+     function deleteLastItem() {
+         if (itemArray.length > 0) {
+             const removedItem = itemArray.pop();
+             alert(`This page says:\nItem: ${removedItem} Deleted as Item ${itemArray.length + 1}`);
+             displayItems();
+         } else {
+             alert("No items to delete.");
+         }
+     }
+     
+     function displayItems() {
+         const itemListElement = document.getElementById("itemList");
+         
+         if (itemArray.length > 0) {
+             let displayText = "";
+             itemArray.forEach((item, index) => {
+                 displayText += `${index + 1}. ${item}<br>`;
+             });
+             itemListElement.innerHTML = displayText;
+         } else {
+             itemListElement.innerHTML = "No items to display.";
+         }
+     }
+   </script>
+</head>
+<body>
+   <h1>Assignment 11.2: JavaScript - Part 3</h1>
+   <p>This is an interactive To Do List. Type in your first item in the text box, then click Add. Click the Display button to see current items in the list. Click on Delete Last Entry if you'd like to remove the last entry.</p>
+   
+   <input type="text" id="itemInput" placeholder="Enter an item">
+   <button onclick="addItem()">Add</button>
+   <button onclick="deleteLastItem()">Delete Last Entry</button>
+   <button onclick="displayItems()">Display</button>
+   
+   <div id="itemList"></div>
+</body>
+</html>
